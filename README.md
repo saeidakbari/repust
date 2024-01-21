@@ -1,5 +1,7 @@
 # Repust
 
+![repust logo](.assets/logo.png)
+
 Repust is a Proxy for Redis and Memcached with Active-Active Replication and Multi Region Support. it is built for adding High Availability and Multi Region Support to Redis and Memcached. since it is a proxy, it can be used with any client that supports Redis or Memcached protocols. Repust is heavily inspired by [twemproxy](https://github.com/twitter/twemproxy) and [dynomite](https://github.com/Netflix/dynomite).
 
 ## Features
