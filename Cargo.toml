@@ -1,0 +1,23 @@
+[package]
+name = "repust"
+version = "0.1.0"
+edition = "2021"
+license = "MIT"
+description = "A Proxy for Redis and Memcached with Active-Active Replication and Multi Region Support"
+readme = "README.md"
+homepage = "github.com/saeidakbari/repust"
+repository = "github.com/saeidakbari/repust"
+
+authors = ["Saeid Akbari <saeidakbari.work@gmail.com>"]
+categories = ["cli", "rust", "repust", "redis", "memcache", "replication"]
+keywords = ["cli", "rust", "repust", "redis", "memcache", "replication"]
+
+[lib]
+name = "librepust"
+path = "src/lib.rs"
+
+[[bin]]
+name = "repust"
+path = "src/main.rs"
+
+[dependencies]
