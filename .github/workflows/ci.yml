@@ -1,0 +1,49 @@
+name: CI
+
+on:
+  push:
+    branches: [ "main" , "develop" ]
+  pull_request:
+    branches: [ "develop" ]
+
+env:
+  CARGO_TERM_COLOR: always
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: dtolnay/rust-toolchain@stable
+      with:
+        components: clippy, rustfmt
+    - uses: Swatinem/rust-cache@v2
+    - name: Check
+      run: cargo clippy --workspace --all-targets --all-features -- -D warnings
+    - name: rustfmt
+      run: cargo fmt --all --check
+
+  test:
+    needs: check
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: taiki-e/install-action@protoc
+    - uses: dtolnay/rust-toolchain@stable
+    - uses: Swatinem/rust-cache@v2
+    - name: Run tests
+      run: cargo test --workspace --all-features --all-targets
+
+  dependencies-are-sorted:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+    - uses: dtolnay/rust-toolchain@stable
+    - uses: Swatinem/rust-cache@v2
+    - name: Install cargo-sort
+      run: |
+        cargo install cargo-sort
+    # Work around cargo-sort not honoring workspace.exclude
+    - name: Check dependency tables
+      run: |
+        cargo sort --workspace --grouped --check
