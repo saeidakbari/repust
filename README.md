@@ -2,7 +2,7 @@
 
 Redis/Memcached Proxy in Rust
 
-[![Build status](https://github.com/saeidakbari/repust/actions/workflows/ci.yml/badge.svg?branch=mainn)](https://github.com/saeidakbari/repust/actions/workflows/ci.yml)
+[![Build status](https://github.com/saeidakbari/repust/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/saeidakbari/repust/actions/workflows/ci.yml)
 
 ![repust logo](.assets/logo.png)
 
