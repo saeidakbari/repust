@@ -10,6 +10,12 @@ Note: In this file, do not use the hard wrap in the middle of a sentence for com
 
 ## [Unreleased]
 
+## [0.1.2-PRERELEASE] - 2024-04-07
+
+### Bug Fixes
+
++ Fixing slow release build by using [Swatinem/rust-cache@v2](https://github.com/Swatinem/rust-cache)
+
 ## [0.1.1-PRERELEASE] - 2024-04-07
 
 ### Added
