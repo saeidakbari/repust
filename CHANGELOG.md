@@ -10,6 +10,12 @@ Note: In this file, do not use the hard wrap in the middle of a sentence for com
 
 ## [Unreleased]
 
+## [0.1.1-PRERELEASE] - 2024-04-07
+
+### Added
+
++ Supporting Apple-Darwin and PC-Windows release targets
+
 ## [0.1.0] - 2024-04-07
 
 ### Added
@@ -24,4 +30,5 @@ Note: In this file, do not use the hard wrap in the middle of a sentence for com
 + Employing asynchronous operations with Tokio and Futures for non-blocking functionality.
 
 [Unreleased]: https://github.com/saeidakbari/repust/compare/v0.1.0...HEAD
+[0.1.1-PRERELEASE]: https://github.com/saeidakbari/repust/compare/v0.1.0...v0.1.1
 [0.1.0]: https://https://github.com/saeidakbari/repust/tags/v0.1.0
