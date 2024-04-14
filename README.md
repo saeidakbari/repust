@@ -6,7 +6,10 @@ Redis/Memcached Proxy in Rust
 
 ![repust logo](.assets/logo.png)
 
-Repust is a Proxy for Redis and Memcached with Active-Active Replication and Multi Region Support. it is built for adding High Availability and Multi Region Support to Redis and Memcached. since it is a proxy, it can be used with any client that supports Redis or Memcached protocols. Repust is heavily inspired by [twemproxy](https://github.com/twitter/twemproxy), [dynomite](https://github.com/Netflix/dynomite)
+Repust is a Proxy for Redis and Memcached with Active-Active Replication and Multi Region Support. it is built for
+adding High Availability and Multi Region Support to Redis and Memcached. since it is a proxy, it can be used with any
+client that supports Redis or Memcached protocols. Repust is heavily inspired by [twemproxy](https://github.com/twitter/twemproxy),
+[dynomite](https://github.com/Netflix/dynomite)
 
 Some of the Repust capabilities are taken from [RCProxy](https://github.com/clia/rcproxy) but completely
 rewritten to be more Rust idiomatic and performant.
@@ -85,6 +88,13 @@ cargo build
 # For building in release mode
 cargo build --release
 ```
+
+## Known Limitation
+
+While Repust acts as a powerful intermediary for Redis interactions, it's important to understand that it doesn't
+inherently support every single Redis command and feature. This is due to the inherent design of proxies, which
+prioritize efficient routing rather than replicating the full functionality of the server. for more information about
+the supported Redis commands, you can check the [supported command](docs/commands.md) list.
 
 ## Contributing
 
